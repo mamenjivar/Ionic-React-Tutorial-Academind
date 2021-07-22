@@ -1,0 +1,7 @@
+{
+  "name": "stack-tabs-drawers-project",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
