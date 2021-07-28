@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   IonBackButton,
   IonButtons,
@@ -13,25 +13,24 @@ import { useParams } from "react-router-dom";
 // import { COURSE_DATA } from "./Courses";
 
 const COURSE_DATA = [
-    {
-      id: "c1",
-      title: "Ionic + React - The Practical Guide",
-    },
-    {
-      id: "c2",
-      title: "Reactjs - The Complete Guide",
-    },
-    {
-      id: "c3",
-      title: "Javascript - The Complete Guide",
-    }
-  ];
+  {
+    id: "c1",
+    title: "Ionic + React - The Practical Guide",
+  },
+  {
+    id: "c2",
+    title: "Reactjs - The Complete Guide",
+  },
+  {
+    id: "c3",
+    title: "Javascript - The Complete Guide",
+  },
+];
 
 const CourseGoals: React.FC = () => {
-  const selectedCourseId = useParams<{ courseId: string}>().courseId;
-    // const selectedCourseId = "c2";
+  const selectedCourseId = useParams<{ courseId: string }>().courseId;
 
-  const selectedCourse = COURSE_DATA.find(c => c.id === selectedCourseId);
+  const selectedCourse = COURSE_DATA.find((c) => c.id === selectedCourseId);
 
   return (
     <IonPage>
